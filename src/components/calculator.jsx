@@ -59,6 +59,7 @@ export default function Calculator() {
 
   const renderButton = (value) => (
     <button
+      key={value}
       onClick={() => handleButtonClick(value)}
       className="w-[75px] h-[50px] bg-[#2c2c2f] text-white rounded-md text-lg hover:bg-[#3a3a3e] transition duration-200"
     >
@@ -78,7 +79,7 @@ export default function Calculator() {
           value={num}
           readOnly
           dir="rtl"
-          className="text-right text-[2.5rem] h-[50px] rounded-md px-4 bg-[#2c2c2f] text-white overflow-x-auto pointer-events-none select-none w-[312px]"
+          className="text-right text-[2.5rem] h-[50px] rounded-md px-4 bg-[#2c2c2f] text-white overflow-x-auto pointer-events-none select-none w-[312px] focus:outline-transparent"
           style={{ caretColor: "transparent" }}
         />
 

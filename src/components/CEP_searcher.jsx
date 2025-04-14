@@ -53,6 +53,7 @@ export default function Cep() {
               setCep(e.target.value);
             }}
             value={cep}
+            className="bg-[#242429] border-b border-[#777] text-[#ccc] text-[1vw] pl-[1.25vw]"
             type="number"
           />
           <button className="buttons" type="submit">

@@ -65,11 +65,12 @@ export default function Todo_list() {
 
   return (
     <div>
-      <h2 className="bg-gradient-to-r from-[#FFD700] via-[#FFA500] to-[#FF8C00] bg-clip-text text-transparent text-3xl font-bold pb-10">
+      <h2 className="bg-gradient-to-r from-[#FFD700] via-[#FFA500] to-[#FF8C00] bg-clip-text text-transparent text-[1.5vw] font-bold pb-10">
         To-Do List
       </h2>
       <div className="flex gap-5">
         <input
+          className="bg-[#242429] border-b border-[#777] pl-[1.25vw] text-[1vw] text-[#ccc]"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           type="text"

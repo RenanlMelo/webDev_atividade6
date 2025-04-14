@@ -32,19 +32,19 @@ function Board({ xIsNext, squares, onPlay }) {
 
   return (
     <>
-      <div className="status">{status}</div>
-      <div className="board">
-        <div className="board-row">
+      <div className="text-[1.5vw] mb-[2vh]">{status}</div>
+      <div className="self-center grid grid-rows-3 grid-cols-1 w-fit">
+        <div className="w-fit">
           <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
           <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
           <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
         </div>
-        <div className="board-row">
+        <div className="w-fit">
           <Square value={squares[3]} onSquareClick={() => handleClick(3)} />
           <Square value={squares[4]} onSquareClick={() => handleClick(4)} />
           <Square value={squares[5]} onSquareClick={() => handleClick(5)} />
         </div>
-        <div className="board-row">
+        <div className="w-fit">
           <Square value={squares[6]} onSquareClick={() => handleClick(6)} />
           <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
           <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
@@ -79,7 +79,10 @@ export default function Game() {
     }
     return (
       <li key={move}>
-        <button className="moves-button" onClick={() => jumpTo(move)}>
+        <button
+          className="rounded-none border-b border-[#505050] w-full hover:bg-[#111]"
+          onClick={() => jumpTo(move)}
+        >
           {description}
         </button>
       </li>
@@ -88,10 +91,10 @@ export default function Game() {
 
   return (
     <>
-      <h2 className="bg-gradient-to-r from-[#FFD700] via-[#FFA500] to-[#FF8C00] bg-clip-text text-transparent text-3xl font-bold pb-10">
+      <h2 className="bg-gradient-to-r from-[#FFD700] via-[#FFA500] to-[#FF8C00] bg-clip-text text-transparent text-[1.5vw] font-bold pb-10">
         Tic Tac Toe
       </h2>
-      <div className="game">
+      <div className="grid grid-cols-[20vw_20vw] items-start justify-start">
         <div className="game-board">
           <Board
             xIsNext={xIsNext}
@@ -99,9 +102,9 @@ export default function Game() {
             onPlay={handlePlay}
           />
         </div>
-        <div className="game-info">
-          <h2 className="historic">Historic</h2>
-          <ol className="moves">{moves}</ol>
+        <div className="flex flex-col">
+          <h2 className="text-[2vw] mb-[2vh]">Historic</h2>
+          <ol className="w-full">{moves}</ol>
         </div>
       </div>
     </>

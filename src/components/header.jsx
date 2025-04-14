@@ -38,13 +38,16 @@ export default function Header() {
 
   return (
     <>
-      <header className="grid grid-cols-[1fr_4fr_1fr]  items-center justify-center px-12 py-10 text-white bg-[#121218] min-w-[99.5vw]">
+      <header className="grid grid-cols-[1fr_4fr_1fr]  items-center justify-center px-12 py-10 text-white bg-[#121218] min-w-[100vw]">
         <h1 className="text-3xl uppercase font-bold">Joguinhos</h1>
         <nav className="flex justify-center">
-          <ul className="flex gap-x-8 text-xl text-[#ccc] ">
+          <ul className="flex gap-x-12 text-xl font-medium text-[#ccc] ">
             {items.map((item) =>
               item.id === active ? (
-                <li className="underline underline-offset-4 decoration-2 decoration-[#ffc107] text-[#ffc107]">
+                <li
+                  key={item.id}
+                  className="underline underline-offset-4 decoration-2 decoration-[#ffc107] text-[#ffc107]"
+                >
                   {item.name}
                 </li>
               ) : (
@@ -61,7 +64,13 @@ export default function Header() {
         </nav>
       </header>
       <main className="px-48 py-16">
-        {items.find((item) => item.id === active)?.component}
+        {active ? (
+          items.find((item) => item.id === active)?.component
+        ) : (
+          <p className="text-3xl mx-auto text-center">
+            Selecione um dos menus disponibilizados acima para iniciar
+          </p>
+        )}
       </main>
     </>
   );
