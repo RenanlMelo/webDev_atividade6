@@ -1,13 +1,25 @@
-# React + Vite
+# 🚀 Projeto React - MultiApps
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto foi desenvolvido com o objetivo de integrar várias mini aplicações em uma única plataforma usando React. As funcionalidades incluídas são:
 
-Currently, two official plugins are available:
+- ✅ To-Do List  
+- 🧮 Contador de Cliques  
+- ❌⭕ Jogo da Velha  
+- 🧠 Calculadora  
+- 📍 Buscador de CEP
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias Utilizadas
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# webDev_atividade6
+- **React** com Vite
+- **JavaScript (ES6+)**
+- **CSS Modules ou Tailwind CSS** (dependendo da sua escolha de estilização)
+- **Git + GitHub** para controle de versão
+- **Vercel** para deploy
+
+---
+
+## 🎨 Estilização
+
+A estilização foi feita com foco em simplicidade, responsividade e visual limpo. Utilizei classes personalizadas e/ou Tailwind CSS para criar uma interface intuitiva, com botões bem posicionados, campos de entrada bem visíveis e responsividade para diferentes tamanhos de tela.
